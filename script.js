@@ -16,10 +16,10 @@ Form.addEventListener('submit', (e) => {
 
     const formData = new FormData(Form);
     const httpRequest = new XMLHttpRequest();
-    httpRequest.open('POST', 'https://formcarry.com/s/jDSMpRR850', true);
+    httpRequest.open('POST', '/Homeowork_3/Homework_3_new/form_script.php', true);
     httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        if (httpRequest.status === 200 || httpRequest.status === 406) {
+        if (httpRequest.status === 200) {
             alert("Данные формы успешно отправлены!");
             Form.reset();
             localStorage.removeItem('FormData');
