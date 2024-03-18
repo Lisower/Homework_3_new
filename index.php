@@ -51,14 +51,6 @@ $db = new PDO('mysql:host=localhost;dbname=u67447', $user, $pass,
 try {
   $stmt = $db->prepare("INSERT INTO main_data SET FIO = ?");
   $stmt->execute([$_POST['FIO']]);
-  $stmt = $db->prepare("INSERT INTO main_data SET phone_number = ?");
-  $stmt->execute([$_POST['phone_number']]);
-  $stmt = $db->prepare("INSERT INTO main_data SET e_mail = ?");
-  $stmt->execute([$_POST['e_mail']]);
-  $stmt = $db->prepare("INSERT INTO main_data SET birthday = ?");
-  $stmt->execute([$_POST['birthday']]);
-  $stmt = $db->prepare("INSERT INTO main_data SET sex = ?");
-  $stmt->execute([$_POST['sex']]);
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
