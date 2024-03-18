@@ -12,7 +12,7 @@
         <button id="Button">Открыть форму</button>
 
         <div id="Popup" class="Popup">
-            <form id="Form" action="" method="POST">
+            <form id="Form">
                 <h1>Форма</h1>
 
                 <label>
