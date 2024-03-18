@@ -16,7 +16,7 @@ Form.addEventListener('submit', (e) => {
 
     const formData = new FormData(Form);
     const httpRequest = new XMLHttpRequest();
-    httpRequest.open('POST', '/Homeowork_3/Homework_3_new/form.php', true);
+    httpRequest.open('POST', '/Homework_3/Homework_3_new/form.php', true);
     httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
