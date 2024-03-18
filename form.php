@@ -17,14 +17,14 @@
 
                 <label>
                     ФИО<br>
-                    <input name="field-name-1"
+                    <input name="FIO"
                     placeholder="Введите Ваше ФИО"
                     required>
                 </label><br>
 
                 <label>
                 Номер телефона<br>
-                <input name="field-tel"
+                <input name="phone_naumber"
                     type="tel"
                     placeholder="Введите Ваш номер телефона"
                     required>
@@ -32,7 +32,7 @@
 
                 <label>
                 Почта e-mail<br>
-                <input name="field-email"
+                <input name="e_mail"
                     type="email"
                     placeholder="Введите Вашу почту"
                     required>
@@ -40,17 +40,17 @@
 
                 <label>
                     Дата рождения<br>
-                    <input name="field-date"
+                    <input name="birthday"
                     type="date"
                     required>
                 </label><br>
                 
                 Пол<br>
                 <label><input type="radio"
-                name="radio-group-1" value="Значение1" checked="checked">
+                name="sex" value="Значение1" checked="checked">
                 М</label>
                 <label><input type="radio"
-                name="radio-group-1" value="Значение2">
+                name="sex" value="Значение2">
                 Ж</label><br>
 
                 <label>
@@ -73,11 +73,11 @@
 
                 <label>
                     Биография<br>
-                    <textarea name="field-name-3" placeholder="Напишите Вашу биографию"></textarea>
+                    <textarea name="biography" placeholder="Напишите Вашу биографию"></textarea>
                 </label><br>
 
                 <label><input type="checkbox"
-                    name="check-1" required>
+                    name="check" required>
                     С контрактом ознакомлен
                 </label><br>
 
