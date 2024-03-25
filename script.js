@@ -4,7 +4,7 @@ const Form = document.getElementById('Form');
 
 Button.addEventListener('click', () => {
     Popup.style.display = 'block';
-    history.pushState(null, '', '/form');
+    //history.pushState(null, '', '/form');
 });
 
 window.addEventListener('popstate', () => {
