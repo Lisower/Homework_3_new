@@ -10,7 +10,7 @@ Button.addEventListener('click', () => {
 window.addEventListener('popstate', () => {
     Popup.style.display = 'none';
 });
-  
+/*  
 Form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -31,7 +31,7 @@ Form.addEventListener('submit', (e) => {
     };
     httpRequest.send(formData);
 });
-
+*/
 Form.addEventListener('change', () => {
     const formData = new FormData(Form);
     const data = Object.fromEntries(formData.entries());
