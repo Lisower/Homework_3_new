@@ -51,7 +51,7 @@ $db = new PDO('mysql:host=localhost;dbname=u67447', $user, $pass,
 try {
   $stmt = $db->prepare(
     "INSERT INTO main_data SET FIO = ?, phone_number = ?");
-  $stmt->execute([$_POST['FIO']],[$_POST['phone_number']]);
+  $stmt->execute([$_POST['FIO','phone_number']]);
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
