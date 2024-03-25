@@ -24,7 +24,7 @@
 
                 <label>
                 Номер телефона<br>
-                <input name="phone_naumber"
+                <input name="phone_number"
                     type="tel"
                     placeholder="Введите Ваш номер телефона"
                     required>
