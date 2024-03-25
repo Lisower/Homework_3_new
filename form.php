@@ -47,10 +47,10 @@
                 
                 Пол<br>
                 <label><input type="radio"
-                name="sex" value="Значение1" checked="checked">
+                name="sex" value="М" checked="checked">
                 М</label>
                 <label><input type="radio"
-                name="sex" value="Значение2">
+                name="sex" value="Ж">
                 Ж</label><br>
 
                 <label>
