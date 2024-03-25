@@ -10,13 +10,13 @@ Button.addEventListener('click', () => {
 window.addEventListener('popstate', () => {
     Popup.style.display = 'none';
 });
-/*  
+ 
 Form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(Form);
     const httpRequest = new XMLHttpRequest();
-    httpRequest.open('POST', '/Homework_3/Homework_3_new/index.php', true);
+    httpRequest.open('POST', '', true);
     httpRequest.onreadystatechange = () => {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
@@ -31,7 +31,7 @@ Form.addEventListener('submit', (e) => {
     };
     httpRequest.send(formData);
 });
-*/
+
 Form.addEventListener('change', () => {
     const formData = new FormData(Form);
     const data = Object.fromEntries(formData.entries());
