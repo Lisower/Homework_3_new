@@ -17,30 +17,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   exit();
 }
 
-/*
-// Проверяем ошибки.
 $errors = FALSE;
-if (empty($_POST['fio'])) {
-  print('Заполните имя.<br/>');
+if (empty($_POST['FIO'])) {
+  alert('Введите ФИО!');
   $errors = TRUE;
 }
 
-if (empty($_POST['year']) || !is_numeric($_POST['year']) || !preg_match('/^\d+$/', $_POST['year'])) {
-  print('Заполните год.<br/>');
+if (empty($_POST['phone_number'])) {
+  alert('Введите номер телефона!');
   $errors = TRUE;
 }
 
+if (!is_numeric($_POST['phone_number']) || !preg_match('/^\d+$/', $_POST['phone_number'])) {
+  alert('Номер телефона введён некорректно!');
+  $errors = TRUE;
+}
 
-// *************
-// Тут необходимо проверить правильность заполнения всех остальных полей.
-// *************
+if (empty($_POST['e_mail'])) {
+  alert('Введите почту!');
+  $errors = TRUE;
+}
+
+if (empty($_POST['favourite_languages'])) {
+  alert('Выберете хотя бы один любимый язык программирования!');
+  $errors = TRUE;
+}
+
+if (empty($_POST['sex'])) {
+  alert('Выберете пол!');
+  $errors = TRUE;
+}
 
 if ($errors) {
-  // При наличии ошибок завершаем работу скрипта.
   exit();
 }
-*/
-// Сохранение в базу данных.
 
 $user = 'u67447';
 $pass = '5579779';
