@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   // Завершаем работу скрипта.
   exit();
 }
-// Иначе, если запрос был методом POST, т.е. нужно проверить данные и сохранить их в XML-файл.
+
 /*
 // Проверяем ошибки.
 $errors = FALSE;
@@ -47,7 +47,6 @@ $pass = '5579779'; // Заменить на пароль, такой же, ка�
 $db = new PDO('mysql:host=localhost;dbname=u67447', $user, $pass,
   [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]); // Заменить test на имя БД, совпадает с логином uXXXXX
 
-// Подготовленный запрос. Не именованные метки.
 try {
   $stmt = $db->prepare(
     "INSERT INTO Application SET FIO = ?, phone_number = ?, e_mail = ?, birthday = ?, sex = ?, biography = ?");
