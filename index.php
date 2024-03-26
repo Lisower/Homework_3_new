@@ -58,4 +58,16 @@ catch(PDOException $e){
   exit();
 }
 
+$applicationId = $db->lastInsertId();
+try {
+  foreach ($_POST['favorite_languages'] as $languageId) {
+    $stmt = $db->prepare("INSERT INTO Application_languages (application_id, language_id) VALUES (?, ?)");
+    $stmt->execute([$applicationId, $languageId]);
+}
+}
+catch(PDOException $e){
+  print('Error : ' . $e->getMessage());
+  exit();
+}
+
 header('Location: ?save=1');
