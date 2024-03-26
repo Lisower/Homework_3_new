@@ -52,7 +52,6 @@ try {
     "INSERT INTO Applications SET FIO = ?, phone_number = ?, e_mail = ?, birthday = ?, sex = ?, biography = ?");
   $stmt->execute([$_POST['FIO'],$_POST['phone_number'],$_POST['e_mail'],$_POST['birthday'],$_POST['sex'],$_POST['biography']]);
 }
-}
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
   exit();
