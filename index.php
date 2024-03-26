@@ -51,9 +51,6 @@ try {
   $stmt = $db->prepare(
     "INSERT INTO Applications SET FIO = ?, phone_number = ?, e_mail = ?, birthday = ?, sex = ?, biography = ?");
   $stmt->execute([$_POST['FIO'],$_POST['phone_number'],$_POST['e_mail'],$_POST['birthday'],$_POST['sex'],$_POST['biography']]);
-  $stmt = $db->prepare("INSERT INTO Application_languages (language_id) VALUES (?)");
-    foreach ($_POST['favourite_languages[]'] as $language_id) {
-  $stmt->execute([$language_id]);
 }
 }
 catch(PDOException $e){
