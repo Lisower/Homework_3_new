@@ -52,7 +52,7 @@ try {
     "INSERT INTO Applications SET FIO = ?, phone_number = ?, e_mail = ?, birthday = ?, sex = ?, biography = ?");
   $stmt->execute([$_POST['FIO'],$_POST['phone_number'],$_POST['e_mail'],$_POST['birthday'],$_POST['sex'],$_POST['biography']]);
   $application_id = $db->lastInsertId();
-  print($_POST['favourite_languages']);
+  print($_POST['favourite_languages[]']);
   $stmt = $db->prepare("INSERT INTO Application_languages (application_id, language_id) VALUES (?, ?)");
   foreach ($_POST['favourite_languages'] as $language_id) {
       $stmt->execute([$application_id, $language_id]); 
