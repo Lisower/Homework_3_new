@@ -19,17 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 $errors = FALSE;
 if (empty($_POST['FIO'])) {
-  alert('Введите ФИО!');
+  print('Введите ФИО!');
   $errors = TRUE;
 }
 
 if (empty($_POST['phone_number'])) {
-  alert('Введите номер телефона!');
+  print('Введите номер телефона!');
   $errors = TRUE;
 }
 
 if (!is_numeric($_POST['phone_number']) || !preg_match('/^\d+$/', $_POST['phone_number'])) {
-  alert('Номер телефона введён некорректно!');
+  print('Номер телефона введён некорректно!');
   $errors = TRUE;
 }
 
@@ -39,12 +39,12 @@ if (empty($_POST['e_mail'])) {
 }
 
 if (empty($_POST['favourite_languages'])) {
-  alert('Выберете хотя бы один любимый язык программирования!');
+  print('Выберете хотя бы один любимый язык программирования!');
   $errors = TRUE;
 }
 
 if (empty($_POST['sex'])) {
-  alert('Выберете пол!');
+  print('Выберете пол!');
   $errors = TRUE;
 }
 
