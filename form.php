@@ -55,7 +55,7 @@
 
                 <label>
                     Любимый язык программирования<br>
-                    <select name="fovourite_languages[]" required
+                    <select name="favourite_languages[]" required
                         multiple="multiple">
                         <option value="1">Pascal</option>
                         <option value="2">C</option>
