@@ -38,9 +38,9 @@ if (empty($_POST['e_mail'])) {
   $errors = TRUE;
 }
 
-if (empty($_POST['favourite_languages'])) {
-  print('Выберете хотя бы один любимый язык программирования!');
-  print($_POST['favourite_languages']);
+if (empty($_POST['fovourite_languages'])) {
+  print('Выберите хотя бы один любимый язык программирования!');
+  print($_POST['fovourite_languages']);
   $errors = TRUE;
 }
 
