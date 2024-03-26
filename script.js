@@ -42,10 +42,12 @@ window.addEventListener('load', () => {
 
     if (savedFormData) {
         document.getElementById('FIO').value = savedFormData.FIO;
-        document.getElementById('email').value = savedFormData.email;
-        document.getElementById('phone').value = savedFormData.phone;
-        document.getElementById('organization').value = savedFormData.organization;
-        document.getElementById('message').value = savedFormData.message;
-        document.getElementById('agreement').checked = savedFormData.agreement;
+        document.getElementById('e_mail').value = savedFormData.e_mail;
+        document.getElementById('phone_number').value = savedFormData.phone_number;
+        document.getElementById('birthday').value = savedFormData.birthday;
+        document.getElementById('sex').value = savedFormData.sex;
+        document.getElementById('favourite_languages').checked = savedFormData.favourite_languages;
+        document.getElementById('biography').checked = savedFormData.biography;
+        document.getElementById('check').checked = savedFormData.check;
     }
 });
