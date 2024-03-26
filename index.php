@@ -57,11 +57,11 @@ catch(PDOException $e){
   exit();
 }
 
-$applicationId = $db->lastInsertId();
+$application_id = $db->lastInsertId();
 try {
-  foreach ($_POST['favorite_languages[]'] as $languageId) {
-    $stmt = $db->prepare("INSERT INTO Application_languages SET application_id = ?, language_id = ?");
-    $stmt->execute([$applicationId, $languageId]);
+  $stmt = $db->prepare("INSERT INTO Application_languages (application_id, language_id) VALUES (?, ?)");
+  foreach ($_POST['favourite_languages'] as $language_id) {
+    $stmt->execute([$application_id, $language_id]); 
 }
 }
 catch(PDOException $e){
