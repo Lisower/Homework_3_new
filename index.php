@@ -16,7 +16,7 @@ if (empty($_POST['FIO'])) {
   $errors = TRUE;
 }
 
-if (preg_match('/^\d[a-zA-Z]+$/', $_POST['FIO'])) {
+if (preg_match('/^[a-zA-Z]+$/', $_POST['FIO'])) {
   print('ФИО введено некорректно!');
   $errors = TRUE;
 }
