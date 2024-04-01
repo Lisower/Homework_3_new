@@ -10,17 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 }
 
 $errors = FALSE;
-if (empty($_POST['FIO'])) {
+if (empty($_POST['FIO']) || preg_match('/^[a-zA-Z]+$/', $_POST['phone_number'])) {
   print('Введите ФИО!');
   $errors = TRUE;
 }
 
-if (empty($_POST['phone_number'])) {
-  print('Введите номер телефона!');
-  $errors = TRUE;
-}
-
-if (!is_numeric($_POST['phone_number']) || !preg_match('/^\d+$/', $_POST['phone_number'])) {
+if (empty($_POST['phone_number']) || !is_numeric($_POST['phone_number']) || !preg_match('/^\d+$/', $_POST['phone_number'])) {
   print('Номер телефона введён некорректно!');
   $errors = TRUE;
 }
@@ -35,7 +30,7 @@ if (empty($_POST['favourite_languages'])) {
   $errors = TRUE;
 }
 
-if (empty($_POST['sex'])) {
+if (empty($_POST['sex']) || preg_match('/^[МЖ]+$/', $_POST['phone_number'])) {
   print('Выберете пол!');
   $errors = TRUE;
 }
