@@ -36,7 +36,12 @@ if (empty($_POST['e_mail'])) {
   $errors = TRUE;
 }
 
-if (empty($_POST['favourite_languages'])) {
+if (empty($_POST['e_mail'])) {
+  alert('Введите почту!');
+  $errors = TRUE;
+}
+
+if (!preg_match('/^[@]+$/', $_POST['e_mail'])) {
   print('Выберите хотя бы один любимый язык программирования!');
   $errors = TRUE;
 }
@@ -46,7 +51,7 @@ if (empty($_POST['sex'])) {
   $errors = TRUE;
 }
 
-if (preg_match('/^[МЖ]+$/', $_POST['phone_number'])) {
+if (!preg_match('/^[МЖ]+$/', $_POST['phone_number'])) {
   print('Некорректный пол!');
   $errors = TRUE;
 }
